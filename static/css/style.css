@@ -1,0 +1,9 @@
+.form-register{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 7.5%;
+}
+.mb-3{
+    margin-top: 10%;
+}

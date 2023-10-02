@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="form-register">
+      <form action="/post" method="post">
+          <div class="form-floating">
+              <label for="floatingInput" class="label-register-page">Codigo Produto</label>
+              <input type="text" class="form-control" name="product_code" placeholder="00000">
+            </div>
+            <div class="form-floating">
+              <label for="floatingInput" class="label-register-page">Nome</label>
+              <input type="text" class="form-control" name="name" placeholder="Name">
+            </div>
+            <div class="form-floating">
+              <label for="floatingInput" class="label-register-page">Data Validade</label>
+              <input type="text" class="form-control" name="expired_in" placeholder="00/00/0000">
+            </div>
+          <input type = "submit" value = "Submit" class="btn btn-primary mb-3"/>  
+      </form>
+    </div>
+{% endblock content %}

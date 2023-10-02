@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form action="/edit/{{product.product_code}}" method="post">
+          <div class="form-floating">
+            <label for="floatingInput">Nome</label>
+            <input type="text" class="form-control" name="name" placeholder="Name">
+          </div>
+          <div class="form-floating">
+            <label for="floatingInput">Data Validade</label>
+            <input type="text" class="form-control" name="expired_in" placeholder="00/00/0000">
+          </div>
+        <input type = "submit" value = "Submit" class="btn btn-primary mb-3"/>  
+    </form>
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Cod. Produto</th>
+        <th scope="col">Produto</th>
+        <th scope="col">Data vencimento</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.product_code }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.expired_in }}</td>
+                <td>
+                  <a href="/edit-product/{{product.product_code}}" class="btn btn-success">EDITAR</a>
+                  <a href="/delete-product/{{product.product_code}}" class="btn btn-danger">DELETAR</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}
